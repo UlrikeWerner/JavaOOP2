@@ -19,4 +19,11 @@ public class Library {
                 "bookList=" + Arrays.toString(bookList) +
                 '}';
     }
+
+    public void addBook(Book book){
+        Book[] newBookList = new Book[this.bookList.length + 1];
+        System.arraycopy(this.bookList, 0, newBookList, 0, this.bookList.length);
+        newBookList[this.bookList.length] = book;
+        this.bookList = newBookList;
+    }
 }

@@ -19,5 +19,9 @@ public class Main {
         book4.setTitle("Kochen für Anfänger");
         ulliBookList.setBookList(new Book[]{book1, book2, book4});
         System.out.println(ulliBookList);
+
+        System.out.println();
+        ulliBookList.addBook(new Book("Java für Anfänger", "Chris Klein"));
+        System.out.println(ulliBookList);
     }
 }
