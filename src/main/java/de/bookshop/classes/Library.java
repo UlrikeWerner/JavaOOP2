@@ -26,4 +26,17 @@ public class Library {
         newBookList[this.bookList.length] = book;
         this.bookList = newBookList;
     }
+
+    public void deleteBook(String isbn){
+        Book[] newBookList = new Book[this.bookList.length - 1];
+        int index = 0;
+        for(Book book : this.bookList){
+            if(isbn.equals(book.getIsbn())){
+                continue;
+            }
+            newBookList[index] = book;
+            index++;
+        }
+        this.bookList = newBookList;
+    }
 }
